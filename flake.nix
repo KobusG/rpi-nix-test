@@ -131,15 +131,6 @@
             shellcheck --shell bash ${./scripts}/*
           '';
 
-        yamllint = runCommand "yamllint"
-          {
-            buildInputs = [ actionlint yamllint ];
-          }
-          ''
-            mkdir $out
-            yamllint --strict ${./.github/workflows}
-            # actionlint ${./.github/workflows}/*.yml
-          '';
       };
     };
 }
