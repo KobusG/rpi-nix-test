@@ -78,10 +78,10 @@
         sensors = callPackage ./nodemcu/provision.nix { };
         cachix-deploy-spec = cachix-deploy-lib.spec {
           agents = {
-            nuc = self.nixosConfigurations.nuc.config.system.build.toplevel;
-            x230 = self.nixosConfigurations.x230.config.system.build.toplevel;
-            rp3 = self.nixosConfigurations.rp3.config.system.build.toplevel;
-            # rp4 = self.nixosConfigurations.rp4.config.system.build.toplevel;
+            # nuc = self.nixosConfigurations.nuc.config.system.build.toplevel;
+            # x230 = self.nixosConfigurations.x230.config.system.build.toplevel;
+            # rp3 = self.nixosConfigurations.rp3.config.system.build.toplevel;
+            rp4 = self.nixosConfigurations.rp4.config.system.build.toplevel;
           };
         };
       };
